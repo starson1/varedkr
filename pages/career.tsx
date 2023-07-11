@@ -122,13 +122,13 @@ const Cards = () => {
                 <div className="h-full whitespace-pre-line flex justify-center py-2">
                 {cards.find((card) => card.id === selectedCard)?.detail}
                 </div>
-                <Link
-                    className="flex justify-center" 
+                <Link legacyBehavior
+                    className="" 
                     href={cards.find((card) => card.id === selectedCard)?.link ?? ""}>
-                    <a>
+                    <a className="flex justify-center">
                         <button
                           type="button"
-                          className="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2"
+                          className=" flex justify-center items-center text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2"
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
