@@ -2,5 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/career": "pages/career.js"
+  "/api/career": "pages/api/career.js",
+  "/career": "pages/career.js",
+  "/": "pages/index.js"
 }
