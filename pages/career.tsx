@@ -124,7 +124,7 @@ const Cards = () => {
                 </div>
                 <Link
                     className="flex justify-center" 
-                    href={cards.find((card) => card.id === selectedCard)?.link}>
+                    href={cards.find((card) => card.id === selectedCard)?.link ?? ""}>
                     <a>
                         <button
                           type="button"
