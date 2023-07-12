@@ -18,7 +18,6 @@ const Achievement = () => {
     {}
   );
   const [windowWidth, setWindowWidth] = useState(0);
-  const [selectedCard, setSelectedCard] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -128,7 +127,7 @@ const Achievement = () => {
   return (
     <div className="flex justify-center py-10">
       <div className="grid gap-4">
-        {Object.entries(groupedCards).map(([category, cards]) => (
+        {Object.entries(groupedCards).reverse().map(([category, cards]) => (
           <div key={category}>
             <h2 className="text-2xl font-bold mt-6 py-2">{category}</h2>
             <Divider className="" />
