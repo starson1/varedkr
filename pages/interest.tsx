@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Divider from "@mui/material/Divider";
-import Link from "next/link";
 
 interface Card {
   id: number;
