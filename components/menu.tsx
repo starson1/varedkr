@@ -77,27 +77,23 @@ const Navbar = () => {
       {/* mobile menu items */}
       <div className={`${!menuToggle ? "hidden" : ""} md:hidden`}>
         <Link
-          href="/artifacts"
+          href="/career"
           className="block py-2 px-4 text-sm hover:bg-gray-200"
         >
-          Artifacts
+          Career
         </Link>
-        <Link href="/filesystem" className="block py-2 px-4 text-sm hover:bg-gray-200">
-          Filesystem
+        <Link href="/interest" className="block py-2 px-4 text-sm hover:bg-gray-200">
+          Interest
         </Link>
-        <Link href="/scenarios" className="block py-2 px-4 text-sm hover:bg-gray-200">
-          Scenarios
+        <Link href="/project" className="block py-2 px-4 text-sm hover:bg-gray-200">
+          Projects
         </Link>
-        <Link href="/experiments" className="block py-2 px-4 text-sm hover:bg-gray-200">
-          Experiments
+        <Link href="/papers" className="block py-2 px-4 text-sm hover:bg-gray-200">
+          Papers
         </Link>
-        <Link href="/definition" className="block py-2 px-4 text-sm hover:bg-gray-200">
-          Definition
+        <Link href="/achievement" className="block py-2 px-4 text-sm hover:bg-gray-200">
+          Achievements
         </Link>
-        <Link href="/tools" className="block py-2 px-4 text-sm hover:bg-gray-200">
-          Tools & Usage
-        </Link>
-
       </div>
     </nav>
   );
