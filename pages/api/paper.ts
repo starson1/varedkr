@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-export const paperData = [
+export const achieveData = [
   {
     id: "2",
     category: "SCI",
@@ -35,5 +35,5 @@ export const paperData = [
 ];
 
 export default function handler(_: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json(paperData);
+  res.status(200).json(achieveData);
 }

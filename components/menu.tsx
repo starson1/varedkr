@@ -50,7 +50,7 @@ const Navbar = () => {
               </Link>
 
               <Link
-                href="/achievements"
+                href="/achievement"
                 className="py-5 px-3 text-gray-700 hover:text-gray-900"
               >
                 Achievements
