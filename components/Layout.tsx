@@ -9,7 +9,7 @@ type Props = {
 export default function Layout(props: Props) {
   return (
     <div className="w-full p-0 flex flex-col h-screen justify-between">
-      <NavBar />
+      {/* <NavBar /> */}
       <main className="mb-auto">{props.children}</main>
       <Bottom />
       
