@@ -13,7 +13,7 @@ export default function Index() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentText((prevText) => (prevText % 3) + 1);
+      setCurrentText((prevText) => (prevText % 4) + 1);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -47,50 +47,85 @@ export default function Index() {
   const closeSidebarPopup = () => {
     setShowSidebarPopup(false);
   };
+
   const indexVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
-  useEffect(() => {
-    const handleEscKey = (event: { keyCode: number; }) => {
-      if (event.keyCode === 27 && showSidebarPopup) {
-        closeSidebarPopup();
-      }
-    };
-
-    const handleClickOutside = (event: { target: any; }) => {
-      if (
-        sidebarRef.current &&
-        !sidebarRef.current.contains(event.target) &&
-        showSidebarPopup
-      ) {
-        closeSidebarPopup();
-      }
-    };
-
-    document.addEventListener("keydown", handleEscKey);
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("keydown", handleEscKey);
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [showSidebarPopup]);
 
   return (
-    <motion.div 
-    className="w-full h-full flex relative"
-      initial="hidden"
-      animate="visible"
-      variants={indexVariants}
-      transition={{ duration: 0.5 }}
-    >
+    <div className="w-full h-full flex relative">
       {sidebarVisible && (
-        <div className="fixed left-0 top-0 h-screen overflow-y-auto">
+        <div className="fixed left-0 top-0 h-screen overflow-y-auto w-64">
           <Sidebar />
         </div>
       )}
-      {(!sidebarVisible && !showSidebarPopup) && (
+      <motion.div
+        className={`${
+          sidebarVisible ? "pl-64" : ""
+        } w-full flex flex-col bg-[#f9f9fe]`}
+        initial="hidden"
+        animate="visible"
+        variants={indexVariants}
+        transition={{ duration: 0.5 }}
+      >
+        <div
+          className={`${
+            sidebarVisible ? "" : ""
+          } min-h-screen flex flex-col bg-[#363351]`}
+        >
+          <div className="section m-auto flex flex-col items-center">
+            <img
+              src="/img/mypic.jpg"
+              alt="??"
+              className="rounded-full w-32 h-32"
+            />
+            <span className="text-3xl font-bold py-2 text-white">
+              SangHyuk An
+            </span>
+            <div className="flex text-white">
+              <div>I'm a&nbsp;</div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentText}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={textVariants}
+                  transition={{ duration: 0.5 }}
+                >
+                  {currentText === 1 && "Digital Forensic Analyst"}
+                  {currentText === 2 && "e-Discovery paralegal"}
+                  {currentText === 3 && "Go-Getter"}
+                  {currentText === 4 && "KBL Fan"}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+            <Contact />
+          </div>
+        </div>
+
+        <div id="About" className="section ">
+          <WhoamI />
+        </div>
+        <div id="Career" className="section ">
+          This is Page Career
+        </div>
+        <div id="Interest" className="section ">
+          This is Page Interest
+        </div>
+        <div id="Projects" className="section">
+          This is Page Projects
+        </div>
+        <div id="Papers" className="section">
+          This is Page Papers
+        </div>
+        <div id="Achievements" className="section">
+          This is Page Achievements
+        </div>
+      </motion.div>
+
+      {!sidebarVisible && !showSidebarPopup && (
         <button
           onClick={toggleSidebar}
           className="py-4 absolute top-4 left-4 text-white z-50"
@@ -113,6 +148,7 @@ export default function Index() {
           </svg>
         </button>
       )}
+
       {showSidebarPopup && (
         <div className="fixed left-0 top-0 w-full h-full bg-gray-800 bg-opacity-50 flex items-center">
           <div className="h-full" ref={sidebarRef}>
@@ -139,41 +175,6 @@ export default function Index() {
           </div>
         </div>
       )}
-      <div className="w-full flex flex-col bg-[#f9f9fe]">
-        <div id="Home" className="min-h-screen flex flex-col bg-[#363351]">
-          <div  className="section m-auto flex flex-col items-center">
-            <img
-              src="/img/mypic.png"
-              alt="??"
-              className="rounded-full w-32 h-32"
-            />
-            <span className="text-3xl font-bold py-2 text-white">SangHyuk An</span>
-            <div className="flex text-white">
-              <div>I'm a&nbsp;</div>
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentText}
-                  initial="hidden"
-                  animate="visible"
-                  exit="hidden"
-                  variants={textVariants}
-                  transition={{ duration: 0.5 }}
-                >
-                  {currentText === 1 && "#1"}
-                  {currentText === 2 && "#2"}
-                  {currentText === 3 && "#3"}
-                </motion.div>
-              </AnimatePresence>
-            </div>
-            <Contact />
-          </div>
-        </div>
-
-        <div id="About" className="section min-h-screen">
-          <WhoamI />
-        </div>
-        <div className="section min-h-screen">This is Page 3.</div>
-      </div>
-    </motion.div>
+    </div>
   );
 }
