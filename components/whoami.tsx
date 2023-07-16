@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const WhoamI = () => {
   return (
     <div className="m-12">
-      <div className="text-4xl font-extrabold">About Me</div>
+      <div className="text-5xl font-extrabold">About Me</div>
       <div className="flex flex-col-reverse md:flex-row px-4 my-20">
         <div className="w-full md:w-full mx-12 flex">
           <div className="p-8 bg-white rounded-xl shadow-md flex justify-between">

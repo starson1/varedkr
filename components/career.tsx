@@ -4,19 +4,19 @@ import Divider from "@mui/material/Divider";
 import Link from "next/link";
 
 interface Card {
-    id: number;
-    img: string;
-    category: string;
-    name: string;
-    date: string;
-    detail: string;
-    link: string;
+  id: number;
+  img: string;
+  category: string;
+  subcategory: string;
+  name: string;
+  detail: string;
+  date: string;
+  link: string;
 }
 
 const Career = () => {
   const [cards, setCards] = useState<Card[]>([]);
-  const [windowWidth, setWindowWidth] = useState(0);
-  const [selectedCard, setSelectedCard] = useState(null);
+  const [groupedCards, setGroupedCards] = useState<{ [key: string]: Card[] }>({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,130 +24,94 @@ const Career = () => {
         const response = await fetch("/api/career");
         const data = await response.json();
         setCards(data);
+
+        // Group the cards by category
+        const grouped = data.reduce(
+          (result: { [key: string]: Card[] }, card: Card) => {
+            if (result[card.category]) {
+              result[card.category].push(card);
+            } else {
+              result[card.category] = [card];
+            }
+            return result;
+          },
+          {}
+        );
+        setGroupedCards(grouped);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
     fetchData();
-
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    // Set the initial window width
-    setWindowWidth(window.innerWidth);
-
-    // Add event listener for window resize
-    window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
   }, []);
-
-  const handleCardClick = (cardId: any) => {
-    setSelectedCard(cardId);
-  };
-
-  const handleClosePopup = () => {
-    setSelectedCard(null);
-  };
-
-  const cardWidth = 300;
-  const cardHeight = 220;
-  const containerPadding = 20;
 
   return (
     <div className="flex flex-col justify-center py-10 m-12 space-y-20">
-      <div className="text-4xl font-extrabold">Career</div>
-      <div
-        className={`grid ${
-          windowWidth <= cardWidth * 3 + containerPadding * 3
-            ? windowWidth <= cardWidth * 2 + containerPadding * 2
-              ? "grid-cols-1"
-              : "grid-cols-2"
-            : "grid-cols-3"
-        } gap-4 `}
-      >
-        {cards.map((card) => (
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0 }}
-            key={card.id}
-            className="bg-white p-4 shadow cursor-pointer"
-            onClick={() => handleCardClick(card.id)}
-            whileHover={{ scale: 1.1 }}
-            style={{
-              width: cardWidth,
-              height: cardHeight,
-              backgroundImage: `url(${card.img})`,
-              backgroundSize: "50%",
-              backgroundPosition: "bottom 10px center",
-              backgroundRepeat: "no-repeat",
-            }}
-          >
-            <div className="text-base font-bold text-gray-400">
-              <span className="w-full p-0.5 bg-gray-500 lg:w-1/3 "></span>
-              <span className="pl-1">{card.category}</span>
-            </div>
-
-            <div className="text-lg font-bold py-1 whitespace-pre-line">{card.name}</div>
-            <div className="absolute">
-                <span className="text-gray-400">{card.date}</span>
-            </div>
-          </motion.div>
-        ))}
-        {selectedCard && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 "
-            onClick={handleClosePopup}
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              exit={{ opacity: 0 }}
-              className="bg-white p-4 shadow w-1/3 h-1/3 rounded-lg"
+      <div className="text-5xl font-extrabold">Career</div>
+      <div className="flex justify-between w-full">
+        {Object.entries(groupedCards).reverse().map(([category, cards]) => (
+          <div className="w-full flex flex-col justify-between" key={category}>
+            <div
+              className="p-8 bg-white rounded-xl shadow-md flex justify-between w-[95%] overflow-auto"
+              style={{ height: "600px" }}
             >
-              <h2 className="text-lg font-bold flex justify-center">
-                Detail
-              </h2>
-              <Divider />
-              <div className="h-4/6">
-                <div className="h-full whitespace-pre-line flex justify-center py-2">
-                {cards.find((card) => card.id === selectedCard)?.detail}
-                </div>
-                <Link legacyBehavior
-                    className="" 
-                    href={cards.find((card) => card.id === selectedCard)?.link ?? ""}>
-                    <a className="flex justify-center">
-                        <button
-                          type="button"
-                          className=" flex justify-center items-center text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2"
-                        >
+              <div className="">
+                {cards.reverse().map((card) => (
+                  <div
+                    className="w-full flex space-x-4"
+                    style={{ height: "250px" }}
+                    key={card.id}
+                  >
+                    <div className="">
+                      <div className="flex-col items-center">
+                        {card.category === "scholar" ? (
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            height="1em"
-                            viewBox="0 0 640 512"
-                            fill="currentColor"
-                            className="pr-2"
+                            height="2.5em"
+                            viewBox="0 0 448 512"
+                            fill="#ff4b61"
                           >
-                            <path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z" />
+                            <path d="M219.3 .5c3.1-.6 6.3-.6 9.4 0l200 40C439.9 42.7 448 52.6 448 64s-8.1 21.3-19.3 23.5L352 102.9V160c0 70.7-57.3 128-128 128s-128-57.3-128-128V102.9L48 93.3v65.1l15.7 78.4c.9 4.7-.3 9.6-3.3 13.3s-7.6 5.9-12.4 5.9H16c-4.8 0-9.3-2.1-12.4-5.9s-4.3-8.6-3.3-13.3L16 158.4V86.6C6.5 83.3 0 74.3 0 64C0 52.6 8.1 42.7 19.3 40.5l200-40zM111.9 327.7c10.5-3.4 21.8 .4 29.4 8.5l71 75.5c6.3 6.7 17 6.7 23.3 0l71-75.5c7.6-8.1 18.9-11.9 29.4-8.5C401 348.6 448 409.4 448 481.3c0 17-13.8 30.7-30.7 30.7H30.7C13.8 512 0 498.2 0 481.3c0-71.9 47-132.7 111.9-153.6z" />
                           </svg>
-                          More Information
-                        </button>
-                    </a>
-                    </Link>
+                        ) : (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="2.5em"
+                            viewBox="0 0 384 512"
+                            fill="#ff4b61"
+                          >
+                            <path d="M64 48c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16h80V400c0-26.5 21.5-48 48-48s48 21.5 48 48v64h80c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16H64zM0 64C0 28.7 28.7 0 64 0H320c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm88 40c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v48c0 8.8-7.2 16-16 16H104c-8.8 0-16-7.2-16-16V104zM232 88h48c8.8 0 16 7.2 16 16v48c0 8.8-7.2 16-16 16H232c-8.8 0-16-7.2-16-16V104c0-8.8 7.2-16 16-16zM88 232c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v48c0 8.8-7.2 16-16 16H104c-8.8 0-16-7.2-16-16V232zm144-16h48c8.8 0 16 7.2 16 16v48c0 8.8-7.2 16-16 16H232c-8.8 0-16-7.2-16-16V232c0-8.8 7.2-16 16-16z" />
+                          </svg>
+                        )}
+                        <div className="flex items-center my-[10px] mx-[14px] w-0.5 h-[190px] bg-[#ff4b61]"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-gray-500 font-semibold">
+                        [{card.subcategory}]
+                      </div>
+                      <div className="text-gray-500">{card.date}</div>
+                      <div className="text-2xl font-bold py-1">{card.name}</div>
+                      <div className="">{card.detail}</div>
+                      {card.link === "" ? "" : (
+                        <div className="py-4">
+                        <a
+                          href={card.link}
+                          className="bg-gray-400 rounded-full text-white p-2"
+                        >
+                          More
+                        </a>
+                        </div>
+                      )}
+                      
+                    </div>
+                  </div>
+                ))}
               </div>
-            </motion.div>
-          </motion.div>
-        )}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
