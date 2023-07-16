@@ -124,6 +124,7 @@ const Achievement = () => {
   const cardHeight = 220;
   const containerPadding = 20;
 
+
   return (
     <div className="flex justify-center py-10">
       <div className="grid gap-4">

@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import Contact from "@/components/contact";
 import WhoamI from "@/components/whoami";
+import Career from "@/components/career";
+import Interest from "@/components/interest";
+import Paper from "@/components/papers";
+import Project from "@/components/projects";
+import Achievement from "@/components/achievement";
 import { motion, AnimatePresence } from "framer-motion";
 import Sidebar from "@/components/sidebar";
 
@@ -109,19 +114,19 @@ export default function Index() {
           <WhoamI />
         </div>
         <div id="Career" className="section ">
-          This is Page Career
+          <Career />
         </div>
         <div id="Interest" className="section ">
-          This is Page Interest
+          <Interest />
         </div>
         <div id="Projects" className="section">
-          This is Page Projects
+          <Project />
         </div>
         <div id="Papers" className="section">
-          This is Page Papers
+          <Paper />
         </div>
         <div id="Achievements" className="section">
-          This is Page Achievements
+          <Achievement />
         </div>
       </motion.div>
 

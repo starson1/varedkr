@@ -13,7 +13,7 @@ interface Card {
     link: string;
 }
 
-const Cards = () => {
+const Career = () => {
   const [cards, setCards] = useState<Card[]>([]);
   const [windowWidth, setWindowWidth] = useState(0);
   const [selectedCard, setSelectedCard] = useState(null);
@@ -60,7 +60,8 @@ const Cards = () => {
   const containerPadding = 20;
 
   return (
-    <div className="flex justify-center py-10">
+    <div className="flex flex-col justify-center py-10 m-12 space-y-20">
+      <div className="text-4xl font-extrabold">Career</div>
       <div
         className={`grid ${
           windowWidth <= cardWidth * 3 + containerPadding * 3
@@ -152,4 +153,4 @@ const Cards = () => {
   );
 };
 
-export default Cards;
+export default Career;
