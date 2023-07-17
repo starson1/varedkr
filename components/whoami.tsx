@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 const WhoamI = () => {
   return (
-    <div className="m-12">
+    <div className="flex flex-col justify-center py-10 m-12 space-y-20">
       <div className="text-5xl font-extrabold">About Me</div>
-      <div className="flex flex-col px-4 my-20">
-        <div className="w-full mx-auto flex flex-col space-x-8 space-y-10 lg:flex-row lg:space-y-0 lg:w-full">
+      <div className="flex flex-col lg:flex-row justify-between w-full">
+        <div className="w-full mx-auto flex flex-col space-y-10 lg:flex-row lg:space-y-0 lg:w-full lg:space-x-8">
           <div className="flex justify-center">
             <div className="w-48 h-48 overflow-hidden">
               <img

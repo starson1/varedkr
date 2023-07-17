@@ -49,11 +49,11 @@ const Career = () => {
   return (
     <div className="flex flex-col justify-center py-10 m-12 space-y-20">
       <div className="text-5xl font-extrabold">Career</div>
-      <div className="flex flex-col lg:flex-row justify-between w-full">
+      <div className="flex flex-col lg:flex-row justify-between w-full lg:space-x-3">
         {Object.entries(groupedCards).reverse().map(([category, cards]) => (
           <div className="w-full flex flex-col justify-between" key={category}>
             <div
-              className="p-8 bg-white rounded-xl shadow-md flex justify-between w-[95%] overflow-auto mb-4"
+              className="p-8 bg-white rounded-xl shadow-md flex justify-between w-full overflow-auto mb-4"
               style={{ height: "600px" }}
             >
               <div className="">
