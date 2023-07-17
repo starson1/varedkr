@@ -4,10 +4,19 @@ const WhoamI = () => {
   return (
     <div className="m-12">
       <div className="text-5xl font-extrabold">About Me</div>
-      <div className="flex flex-col-reverse md:flex-row px-4 my-20">
-        <div className="w-full md:w-full mx-12 flex">
+      <div className="flex flex-col px-4 my-20">
+        <div className="w-full mx-auto flex flex-col space-x-8 space-y-10 lg:flex-row lg:space-y-0 lg:w-full">
+          <div className="flex justify-center">
+            <div className="w-48 h-48 overflow-hidden">
+              <img
+                src="/img/mypic.jpg"
+                alt="??"
+                className="object-cover w-full h-full rounded-full"
+              />
+            </div>
+          </div>
           <div className="p-8 bg-white rounded-xl shadow-md flex justify-between">
-            <div className="w-1/2  break-words leading-10 font-light text-xl tracking-wider">
+            <div className="w-full lg:w-1/2 break-words leading-10 font-light text-xl tracking-wider">
               <div className="flex flex-col h-full items-center">
                 <div className="mb-auto whitespace-break-spaces">
                   I am SangHyuk An, Digital Forenic Researcher from Seoul, Republic of Korea.
@@ -21,13 +30,10 @@ const WhoamI = () => {
                 </div>
               </div>
             </div>
-
-            <div className=" w-[45%] space-y-8">
+            <div className="w-full lg:w-[45%] space-y-8">
               <div className="space-y-2">
                 <div className="justify-between flex">
-                  <span className="font-semibold text-xl">
-                    Digital Forensic
-                  </span>
+                  <span className="font-semibold text-xl">Digital Forensic</span>
                   <span>80%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2.5">
@@ -45,9 +51,7 @@ const WhoamI = () => {
               </div>
               <div className="space-y-2">
                 <div className="justify-between flex">
-                  <span className="font-semibold text-xl">
-                    Reverse Engineering
-                  </span>
+                  <span className="font-semibold text-xl">Reverse Engineering</span>
                   <span>60%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2.5">
@@ -73,15 +77,6 @@ const WhoamI = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="md:order-first flex justify-center">
-          <div className="w-48 h-48 overflow-hidden">
-            <img
-              src="/img/mypic.jpg"
-              alt="??"
-              className="object-cover w-full h-full rounded-full"
-            />
           </div>
         </div>
       </div>

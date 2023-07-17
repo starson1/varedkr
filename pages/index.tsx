@@ -31,7 +31,7 @@ export default function Index() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth > 1024) {
         setSidebarVisible(true);
         setShowSidebarPopup(false);
       } else {

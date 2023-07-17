@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 export const interestData = [
   {
     id: "0",
-    category: "Digital Forensic & Incident Response",
+    category: "DFIR",
     name: "File System",
     detail:
       "",
@@ -11,7 +11,7 @@ export const interestData = [
   },
   {
     id: "1",
-    category: "Digital Forensic & Incident Response",
+    category: "DFIR",
     name: "e-Discovery",
     detail:
       "",
@@ -19,7 +19,7 @@ export const interestData = [
   },
   {
     id: "2",
-    category: "Digital Forensic & Incident Response",
+    category: "DFIR",
     name: "Windows Forensic",
     detail:
       "",
@@ -27,7 +27,7 @@ export const interestData = [
   },
   {
     id: "3",
-    category: "Digital Forensic & Incident Response",
+    category: "DFIR",
     name: "MAC Forensic",
     detail:
       "",
