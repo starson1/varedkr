@@ -15,8 +15,8 @@ const WhoamI = () => {
               />
             </div>
           </div>
-          <div className="p-8 bg-white rounded-xl shadow-md flex justify-between">
-            <div className="w-full lg:w-1/2 break-words leading-10 font-light text-xl tracking-wider">
+          <div className="p-8 bg-white rounded-xl shadow-md flex flex-col justify-between md:flex-row">
+            <div className="w-full md:w-[50%] break-words leading-10 font-light text-xl tracking-wider">
               <div className="flex flex-col h-full items-center">
                 <div className="mb-auto whitespace-break-spaces">
                   I am SangHyuk An, Digital Forenic Researcher from Seoul, Republic of Korea.
@@ -30,7 +30,7 @@ const WhoamI = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-[45%] space-y-8">
+            <div className="w-full md:w-[45%] space-y-8 py-10">
               <div className="space-y-2">
                 <div className="justify-between flex">
                   <span className="font-semibold text-xl">Digital Forensic</span>

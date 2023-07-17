@@ -57,7 +57,7 @@ const Career = () => {
               style={{ height: "600px" }}
             >
               <div className="">
-                {cards.reverse().map((card) => (
+                {cards.map((card) => (
                   <div
                     className="w-full flex space-x-4"
                     style={{ height: "250px" }}
