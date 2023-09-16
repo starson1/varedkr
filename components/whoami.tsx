@@ -24,6 +24,7 @@ const WhoamI = () => {
                   Analyzing functions via Reverse Engineering is also available.
                   Nowadays I am studying e-Discovery and hope to make experiences.
                   For hobby, I also do Full Stack Development using NextJS & Typescript.
+                  I am currently serving in the Republic of Korea Air Force due to my mandatory service.
                 </div>
                 <div className="mt-6 p-3 w-48 bg-[#ff4b61] text-white text-center rounded-full font-bold">
                   <a href="">Download CV</a>

@@ -46,6 +46,25 @@ const Career = () => {
     fetchData();
   }, []);
 
+  const calculateDDay = (dateRange: string) => {
+    const today = new Date();
+    const dateParts = dateRange.split(" - ");
+    const dDayDate = new Date(dateParts[1]);
+    if(dateParts.length === 2){
+      
+    const timeDifference = dDayDate.getTime() - today.getTime();
+    const daysRemaining = Math.ceil(timeDifference / (1000 * 3600 * 24));
+
+    if (daysRemaining < 0) {
+      return "";
+    } else if (daysRemaining === 0) {
+      return "D-Day";
+    } else {
+      return `D-${daysRemaining}`;
+    }
+    };
+  }
+
   return (
     <div className="flex flex-col justify-center py-10 m-12 space-y-20">
       <div className="text-5xl font-extrabold">Career</div>
@@ -94,6 +113,13 @@ const Career = () => {
                       <div className="text-gray-500">{card.date}</div>
                       <div className="text-2xl font-bold py-1">{card.name}</div>
                       <div className="">{card.detail}</div>
+                      {card.subcategory === "Military Serving" ? (
+                        <div className="py-4">
+                        <div className ="bg-red-400 rounded-full text-white p-2 w-20">
+                          {calculateDDay(card.date)}
+                        </div>
+                        </div>
+                      ) : ""}
                       {card.link === "" ? "" : (
                         <div className="py-4">
                           <a
