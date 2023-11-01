@@ -54,8 +54,8 @@ const Sidebar = () => {
           <ScrollLink
             to="Home"
             spy={true}
-            smooth={true}
             duration={500}
+            smooth={true}
             onClick={smoothScrollToTop}
             className="flex space-x-1"
           >
@@ -70,8 +70,7 @@ const Sidebar = () => {
             spy={true}
             smooth={true}
             duration={500}
-            offset={-50}
-            activeClass="active"
+            onClick={smoothScrollToTop}
             className={`hover:text-[#f2d271]  px-4 items-center flex ${activeSection === "Home" ? "text-[#f2d271]" : ""}`}
           >
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="currentColor" className="px-3 flex items-center justify-center"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
@@ -82,7 +81,7 @@ const Sidebar = () => {
             spy={true}
             smooth={true}
             duration={500}
-            offset={-50}
+            offset={50}
             activeClass="active"
             className={`hover:text-[#f2d271]  px-4 items-center flex ${activeSection === "About" ? "text-[#f2d271]" : ""}`}
           >
@@ -90,47 +89,47 @@ const Sidebar = () => {
             About
           </ScrollLink>
           <ScrollLink
-            to="career"
+            to="Career"
             spy={true}
             smooth={true}
             duration={500}
-            offset={-50}
+            offset={50}
             activeClass="active"
-            className="hover:text-[#f2d271] px-4 items-center flex"
+            className={`hover:text-[#f2d271]  px-4 items-center flex ${activeSection === "Career" ? "text-[#f2d271]" : ""}`}
           >
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"fill="currentColor" className="px-3 flex items-center justify-center"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
             Career
           </ScrollLink>
           <ScrollLink
-            to="interest"
+            to="Interest"
             spy={true}
             smooth={true}
             duration={500}
-            offset={-50}
+            offset={50}
             activeClass="active"
-            className={`hover:text-[#f2d271]  px-4 items-center flex ${activeSection === "Career" ? "text-[#f2d271]" : ""}`}
+            className={`hover:text-[#f2d271]  px-4 items-center flex ${activeSection === "Interest" ? "text-[#f2d271]" : ""}`}
           >
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"fill="currentColor" className="px-3 flex items-center justify-center"><path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.6 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"/></svg>
             Interest
           </ScrollLink>
           <ScrollLink
-            to="projects"
+            to="Projects"
             spy={true}
             smooth={true}
             duration={500}
-            offset={-50}
+            offset={50}
             activeClass="active"
-            className="hover:text-[#f2d271] px-4 items-center flex"
+            className={`hover:text-[#f2d271]  px-4 items-center flex ${activeSection === "Projects" ? "text-[#f2d271]" : ""}`}
           >
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"fill="currentColor" className="px-3 flex items-center justify-center"><path d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48V96H384V80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H432c-26.5 0-48-21.5-48-48V160H192v16c0 1.7-.1 3.4-.3 5L272 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V336c0-1.7 .1-3.4 .3-5L144 224H48c-26.5 0-48-21.5-48-48V80z"/></svg>
             Projects
           </ScrollLink>
           <ScrollLink
-            to="papers"
+            to="Papers"
             spy={true}
             smooth={true}
             duration={500}
-            offset={-50}
+            offset={50}
             activeClass="active"
             className={`hover:text-[#f2d271]  px-4 items-center flex ${activeSection === "Papers" ? "text-[#f2d271]" : ""}`}
           >
@@ -138,7 +137,7 @@ const Sidebar = () => {
             Papers
           </ScrollLink>
           <ScrollLink
-            to="achievement"
+            to="Achievement"
             spy={true}
             smooth={true}
             duration={500}

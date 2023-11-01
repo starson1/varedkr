@@ -115,7 +115,7 @@ const Career = () => {
                       <div className="">{card.detail}</div>
                       {card.subcategory === "Military Serving" ? (
                         <div className="py-4">
-                        <div className ="bg-red-400 rounded-full text-white p-2 w-20">
+                        <div className ="bg-red-400 rounded-full text-white p-2 w-20 text-center">
                           {calculateDDay(card.date)}
                         </div>
                         </div>

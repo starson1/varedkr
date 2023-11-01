@@ -74,7 +74,7 @@ export default function Index() {
         variants={indexVariants}
         transition={{ duration: 0.5 }}
       >
-        <div
+        <div id="Home"
           className={`${
             sidebarVisible ? "" : ""
           } min-h-screen flex flex-col bg-[#363351]`}
