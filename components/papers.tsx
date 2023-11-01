@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const Paper = () => {
-  const [papers, setPapers] = useState([]);
+  const [papers, setPapers] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
