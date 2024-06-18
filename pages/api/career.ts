@@ -50,7 +50,7 @@ export const careerData = [
     detail:
       "High School Student",
     date: "2014.03 - 2017.02",
-    link: "http://korea.ac.kr",
+    link: "https://gaepo.sen.hs.kr/",
     img: "/img/career_01.gif",
   }
   

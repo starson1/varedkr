@@ -5,9 +5,11 @@ import Career from "@/components/career";
 import Interest from "@/components/interest";
 import Paper from "@/components/papers";
 import Project from "@/components/projects";
+import Certificate from "@/components/certificates";
 import Achievement from "@/components/achievement";
 import { motion, AnimatePresence } from "framer-motion";
 import Sidebar from "@/components/sidebar";
+
 
 export default function Index() {
   const [currentText, setCurrentText] = useState(1);
@@ -128,6 +130,9 @@ export default function Index() {
         </div>
         <div id="Achievement" className="section">
           <Achievement />
+        </div>
+        <div id="Certificate" className="section">
+          <Certificate />
         </div>
       </motion.div>
 
