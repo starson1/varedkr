@@ -4,7 +4,7 @@ export const projectData = [
   {
     id: "0",
     category: "Domestic",
-    name: "Test of Economic Sense And Thinking",
+    name: "Test of Economic Sense & Thinking",
     subname: "TESAT",
     organization: "Hankyung",
     grade: "Grade 2",
