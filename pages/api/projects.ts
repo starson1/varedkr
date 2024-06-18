@@ -13,7 +13,7 @@ export const projectData = [
     category: "Commercial",
     name: "Carpe Forensics",
     company: "DFRC",
-    position: "GUI Development",
+    position: "GUI Tool Development",
   },
   {
     id: "1",
@@ -34,7 +34,7 @@ export const projectData = [
     category: "Commercial",
     name: "Network Penetration Testing",
     company: "ROKA DoD",
-    position: "Vulnerability Analysis",
+    position: "Penetration Testing",
   },
   {
     id: "1",

@@ -22,7 +22,7 @@ const WhoamI = () => {
                   I am SangHyuk An, Digital Forenic Researcher from Seoul, Republic of Korea.
                   I have skills in Incident Response and developing Forensic Tools.
                   Analyzing functions via Reverse Engineering is also available.
-                  Nowadays I am studying e-Discovery and hope to make experiences.
+                  Nowadays I am studying e-Discovery and hope to make experiences with real world cases.
                   For hobby, I also do Full Stack Development using NextJS & Typescript.
                   I am currently serving in the Republic of Korea Air Force due to my mandatory service.
                 </div>

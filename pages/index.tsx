@@ -18,7 +18,7 @@ export default function Index() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentText((prevText) => (prevText % 4) + 1);
+      setCurrentText((prevText) => (prevText % 5) + 1);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -100,9 +100,10 @@ export default function Index() {
                   transition={{ duration: 0.5 }}
                 >
                   {currentText === 1 && "Digital Forensic Analyst"}
-                  {currentText === 2 && "e-Discovery paralegal"}
+                  {currentText === 2 && "Republic of Korea Air Force"}
                   {currentText === 3 && "Go-Getter"}
-                  {currentText === 4 && "KBL Fan"}
+                  {currentText === 4 && "Basketball Fan"}
+                  {currentText === 5 && "Traveler"}
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -125,7 +126,7 @@ export default function Index() {
         <div id="Papers" className="section">
           <Paper />
         </div>
-        <div id="Achievements" className="section">
+        <div id="Achievement" className="section">
           <Achievement />
         </div>
       </motion.div>

@@ -61,11 +61,6 @@ const Project = () => {
     };
   }, []);
 
-  const getRandomColor = () => {
-    const colors = ["red", "blue", "green", "yellow", "purple", "orange"];
-    const randomIndex = Math.floor(Math.random() * colors.length);
-    return colors[randomIndex];
-  };
 
   const cardWidth = 300;
   const cardHeight = 220;
@@ -74,6 +69,7 @@ const Project = () => {
   return (
     <div className="flex justify-center py-10">
       <div className="grid gap-4">
+      <div className="text-5xl font-extrabold">Projects</div>
         {Object.entries(groupedCards).map(([category, cards]) => (
           <div key={category}>
             <h2 className="text-2xl font-bold mt-6 py-2">{category}</h2>
@@ -88,7 +84,7 @@ const Project = () => {
               } gap-4 py-4`}
             >
               {cards.map((card) => {
-                const color = getRandomColor(); // Generate random color
+                const color = "blue"; // Generate random color
                 return (
                   <motion.div
                     initial={{ scale: 0 }}

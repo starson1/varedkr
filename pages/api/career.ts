@@ -42,6 +42,17 @@ export const careerData = [
     link: "http://korea.ac.kr",
     img: "/img/career_01.gif",
   },
+  {
+    id: "5",
+    category: "scholar",
+    subcategory: "High School",
+    name: "Gaepo High School",
+    detail:
+      "High School Student",
+    date: "2014.03 - 2017.02",
+    link: "http://korea.ac.kr",
+    img: "/img/career_01.gif",
+  }
   
 ];
 
