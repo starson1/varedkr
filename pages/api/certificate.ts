@@ -34,6 +34,17 @@ export const projectData = [
     acquisition: "2024-06-18",
     url: "https://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId="
   },
+  {
+    id: "0",
+    category: "Domestic",
+    name: "SQL Developer",
+    subname: "SQLD",
+    organization: "DATAQ",
+    grade: "",
+    certid: "SQLD-053012077",
+    acquisition: "2024-06-21",
+    url: "https://www.dataq.or.kr/www/sub/a_04.do"
+  },
 ];
 
 export default function handler(_: NextApiRequest, res: NextApiResponse) {
