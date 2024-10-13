@@ -45,6 +45,18 @@ export const projectData = [
     acquisition: "2024-06-21",
     url: "https://www.dataq.or.kr/www/sub/a_04.do"
   },
+  {
+    id: "0",
+    category: "Domestic",
+    name: "Linux Master",
+    subname: "리눅스마스터 2급",
+    organization: "KAIT",
+    grade: "2",
+    certid: "LMS-2403-008675",
+    acquisition: "2024-10-04",
+    url: "https://www.ihd.or.kr/introducesubject1.do"
+
+  }
 ];
 
 export default function handler(_: NextApiRequest, res: NextApiResponse) {

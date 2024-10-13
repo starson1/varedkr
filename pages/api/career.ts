@@ -4,9 +4,9 @@ export const careerData = [
   {
     id: "3",
     category: "work",
-    subcategory: "Military Serving",
+    subcategory: "Military Duty",
     name: "ROKA Air Force",
-    detail: "정보보호병",
+    detail: "정보보호병(CERT)",
     date: "2023.08.14 - 2025.05.14",
     link: "",
     img: "/img/career_03.png",

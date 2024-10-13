@@ -103,7 +103,7 @@ export default function Index() {
                 >
                   {currentText === 1 && "Digital Forensic Analyst"}
                   {currentText === 2 && "Republic of Korea Air Force"}
-                  {currentText === 3 && "Go-Getter"}
+                  {currentText === 3 && "Coffee Lover"}
                   {currentText === 4 && "Basketball Fan"}
                   {currentText === 5 && "Traveler"}
                 </motion.div>
