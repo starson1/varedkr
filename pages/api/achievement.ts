@@ -2,6 +2,14 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 export const paperData = [
   {
+    id: "10",
+    category: "2024",
+    name: "DFRWS Challenge 2023 - Troubled Elevator",    
+    link: "https://dfrws.org/forensic-challenges/",
+    position : "1st place",
+    place: "DFRWS"
+  },
+  {
     id: "9",
     category: "2023",
     name: "Cybercrime Forensics specialist group poster competition",
