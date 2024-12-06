@@ -15,8 +15,8 @@ export const projectData = [
   {
     id: "0",
     category: "Domestic",
-    name: "매경 TEST",
-    subname: "MK TEST of Economic & Strategic business Thinking",
+    subname: "매경 TEST",
+    name: "MK TEST of Economic & Strategic business Thinking",
     organization: "",
     grade: "Proficient(635)",
     certid: "MK102-3239921",
