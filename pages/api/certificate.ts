@@ -16,9 +16,9 @@ export const projectData = [
     id: "0",
     category: "Domestic",
     subname: "매경 TEST",
-    name: "MK TEST of Economic & Strategic business Thinking",
-    organization: "",
-    grade: "Proficient(635)",
+    name: "Economic & Strategic business Thinking",
+    organization: "MK",
+    grade: "Proficient",
     certid: "MK102-3239921",
     acquisition: "2024-12-06",
     url: "https://exam.mk.co.kr/"
@@ -62,7 +62,7 @@ export const projectData = [
     name: "Linux Master",
     subname: "리눅스마스터 2급",
     organization: "KAIT",
-    grade: "2",
+    grade: "Grade 2",
     certid: "LMS-2403-008675",
     acquisition: "2024-10-04",
     url: "https://www.ihd.or.kr/introducesubject1.do"
