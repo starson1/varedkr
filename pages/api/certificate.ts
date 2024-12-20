@@ -10,7 +10,8 @@ export const projectData = [
     grade: "Grade 2",
     certid: "8700004074",
     acquisition: "2024-04-20",
-    url: "https://www.tesat.or.kr/"
+    url: "https://www.tesat.or.kr/",
+    file: "/img/tesat.png"
   },
   {
     id: "0",
@@ -21,7 +22,8 @@ export const projectData = [
     grade: "Proficient",
     certid: "MK102-3239921",
     acquisition: "2024-12-06",
-    url: "https://exam.mk.co.kr/"
+    url: "https://exam.mk.co.kr/",
+    file: "/img/mktest.png"
   },
   {
     id: "0",
@@ -32,7 +34,8 @@ export const projectData = [
     grade: "Grade 1(480)",
     certid: "RNXFQ8558RFTG",
     acquisition: "2024-06-08",
-    url: "https://www.teps.or.kr/"
+    url: "https://www.teps.or.kr/",
+    file: "/img/teps.png"
   },
   {
     id: "0",
@@ -43,7 +46,8 @@ export const projectData = [
     grade: "",
     certid: "24201120466G",
     acquisition: "2024-06-18",
-    url: "https://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId="
+    url: "https://www.q-net.or.kr/crf005.do?id=crf00505&gSite=Q&gId=",
+    file: "/img/junbo.png"
   },
   {
     id: "0",
@@ -54,7 +58,8 @@ export const projectData = [
     grade: "",
     certid: "SQLD-053012077",
     acquisition: "2024-06-21",
-    url: "https://www.dataq.or.kr/www/sub/a_04.do"
+    url: "https://www.dataq.or.kr/www/sub/a_04.do",
+    file: "/img/sqld.png"
   },
   {
     id: "0",
@@ -65,7 +70,8 @@ export const projectData = [
     grade: "Grade 2",
     certid: "LMS-2403-008675",
     acquisition: "2024-10-04",
-    url: "https://www.ihd.or.kr/introducesubject1.do"
+    url: "https://www.ihd.or.kr/introducesubject1.do",
+    file: "/img/linuxmaster.png"
 
   }
 ];

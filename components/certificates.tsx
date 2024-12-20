@@ -13,6 +13,7 @@ interface Card {
   certid: string;
   acquisition: string;
   url: string;
+  file: string;
 }
 
 const Certificate = () => {
