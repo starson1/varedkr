@@ -102,7 +102,7 @@ export default function Index() {
                   transition={{ duration: 0.5 }}
                 >
                   {currentText === 1 && "Digital Forensic Analyst"}
-                  {currentText === 2 && "Republic of Korea Air Force"}
+                  {currentText === 2 && "Go-Doer"}
                   {currentText === 3 && "Coffee Lover"}
                   {currentText === 4 && "Basketball Fan"}
                   {currentText === 5 && "Traveler"}

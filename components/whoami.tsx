@@ -27,7 +27,7 @@ const WhoamI = () => {
                   I am currently serving in the Republic of Korea Air Force due to my mandatory service.
                 </div>
                 <div className="mt-6 p-3 w-48 bg-[#ff4b61] text-white text-center rounded-full font-bold">
-                  <a href="">Download CV</a>
+                  <a href="/pdf/CV.pdf" target="_blank">Download CV</a>
                 </div>
               </div>
             </div>

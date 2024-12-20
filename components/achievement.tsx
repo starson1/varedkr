@@ -126,7 +126,7 @@ const Achievement = () => {
 
 
   return (
-    <div className="flex justify-center py-10">
+    <div className="flex justify-center py-10 flex-col m-12 space-y-20">
       <div className="grid gap-4">
         <div className="text-5xl font-extrabold">Achievements</div>
         {Object.entries(groupedCards).reverse().map(([category, cards]) => (

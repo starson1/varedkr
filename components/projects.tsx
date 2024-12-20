@@ -67,7 +67,7 @@ const Project = () => {
   const containerPadding = 20;
 
   return (
-    <div className="flex justify-center py-10">
+    <div className="flex flex-col m-12 space-y-20 justify-center py-10">
       <div className="grid gap-4">
       <div className="text-5xl font-extrabold">Projects</div>
         {Object.entries(groupedCards).map(([category, cards]) => (
