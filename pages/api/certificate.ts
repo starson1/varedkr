@@ -4,6 +4,18 @@ export const projectData = [
   {
     id: "0",
     category: "Domestic",
+    name: "Oral Proficiency Interview",
+    subname: "OPIc",
+    organization: "ACTFL",
+    grade: "IH",
+    certid: "2A4453735420",
+    acquisition: "2024-12-20",
+    url: "https://opic.or.kr",
+    file: "/img/opic.png"
+  },
+  {
+    id: "0",
+    category: "Domestic",
     name: "Test of Economic Sense & Thinking",
     subname: "TESAT",
     organization: "Hankyung",
