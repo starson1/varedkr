@@ -2,6 +2,16 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 export const careerData = [
   {
+    id: "4",
+    category: "work",
+    subcategory: "Full Time",
+    name: "**Redacted**",
+    detail: "Digital Forensic & E-Discovery researcher",
+    date: "2025.07.07 - Present",
+    link: "",
+    img: "/img/career_03.png",
+  },
+  {
     id: "3",
     category: "work",
     subcategory: "Military Duty",

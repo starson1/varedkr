@@ -79,7 +79,7 @@ export default function Index() {
         <div id="Home"
           className={`${
             sidebarVisible ? "" : ""
-          } min-h-screen flex flex-col bg-[#363351]`}
+          } min-h-screen flex flex-col bg-[#566A8E]`}
         >
           <div className="section m-auto flex flex-col items-center">
             <img
