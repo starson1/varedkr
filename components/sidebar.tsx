@@ -55,7 +55,7 @@ const Sidebar = () => {
 
   return (
     <motion.nav
-      className="bg-[#566A8E] h-full"
+      className="bg-[#363351] h-full"
       initial="hidden"
       animate="visible"
       variants={sidebarVariants}
